@@ -1,0 +1,3 @@
+[submodule "molly-core"]
+	path = molly-core
+	url = https://github.com/mollyim/mollyim-android.git
