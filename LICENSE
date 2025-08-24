@@ -1,0 +1,23 @@
+English Version: languages/en/LICENSE
+
+MIT Lizenz
+
+Copyright (c) 2024 osCASHme
+
+Hiermit wird jeder Person, die eine Kopie dieser Software und der dazugehörigen Dokumentationsdateien (die "Software") erhält, kostenlos die Erlaubnis erteilt, ohne Einschränkung mit der Software zu handeln, einschließlich und ohne Beschränkung der Rechte zur Nutzung, zum Kopieren, Ändern, Zusammenführen, Veröffentlichen, Verteilen, Unterlizenzieren und/oder Verkaufen von Kopien der Software, und Personen, denen die Software zur Verfügung gestellt wird, dies unter den folgenden Bedingungen zu gestatten:
+
+Der obige Urheberrechtshinweis und dieser Genehmigungshinweis sind in allen Kopien oder wesentlichen Teilen der Software enthalten.
+
+DIE SOFTWARE WIRD "WIE SIE IST" ZUR VERFÜGUNG GESTELLT, OHNE JEGLICHE GEWÄHRLEISTUNG, WEDER AUSDRÜCKLICH NOCH STILLSCHWEIGEND, EINSCHLIEßLICH, ABER NICHT BESCHRÄNKT AUF DIE GEWÄHRLEISTUNG DER MARKTGÄNGIGKEIT, EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND NICHTVERLETZUNG. IN KEINEM FALL SIND DIE AUTOREN ODER URHEBERRECHTSINHABER FÜR JEGLICHE ANSPRÜCHE, SCHÄDEN ODER ANDERE VERPFLICHTUNGEN HAFTBAR, SEI ES DURCH VERTRAG, UNERLAUBTE HANDLUNG ODER ANDERWEITIG, DIE SICH AUS, AUS ODER IN VERBINDUNG MIT DER SOFTWARE ODER DER NUTZUNG ODER ANDEREN UMGANG MIT DER SOFTWARE ERGEBEN.
+
+---
+
+WICHTIGER HINWEIS ZU ABHÄNGIGKEITEN:
+
+Diese Software nutzt Komponenten mit verschiedenen Lizenzen:
+
+- Molly Core: AGPLv3 (https://github.com/mollyim/mollyim-android)
+- MobileCoin SDK: Apache 2.0 (https://github.com/mobilecoinofficial/mobilecoin)
+- Signal Protocol Libraries: GPLv3 (https://github.com/signalapp/libsignal)
+
+Benutzer und Entwickler müssen die jeweiligen Lizenzbedingungen beachten.
