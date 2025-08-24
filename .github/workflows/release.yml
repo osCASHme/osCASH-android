@@ -1,0 +1,107 @@
+name: Create osCASH.me Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  create-release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: Extract Version from Tag
+      id: version
+      run: |
+        TAG=${GITHUB_REF#refs/tags/}
+        VERSION=${TAG#v}
+        echo "tag=$TAG" >> $GITHUB_OUTPUT
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        
+    - name: Generate Release Notes
+      id: release_notes
+      run: |
+        cat > release_notes.md << 'EOF'
+        # osCASH.me v${{ steps.version.outputs.version }}
+        
+        ## 🔒 Privacy Messenger mit eUSD & MOB Wallet
+        
+        ### ✨ Features
+        - **End-to-End Verschlüsselung** für alle Nachrichten
+        - **MobileCoin Integration** - eUSD & MOB Wallet
+        - **Tor Support** für maximale Anonymität  
+        - **Signal Protocol** - bewährte Sicherheit
+        - **Open Source** - community-auditiert
+        
+        ### 📱 Installation
+        1. APK herunterladen: `osCASH.me-v${{ steps.version.outputs.version }}.apk`
+        2. "Unbekannte Quellen" in Android-Einstellungen erlauben
+        3. APK installieren und starten
+        4. Sichere Backup-Phrase notieren
+        
+        ### 🛡️ Sicherheitshinweise
+        - **Nur von GitHub herunterladen** - niemals von anderen Quellen
+        - **SHA256 Checksumme prüfen** (siehe unten)
+        - **Backup-Phrase sicher aufbewahren** - ohne sie sind Wallets unwiederbringlich verloren
+        - **Updates nur von offiziellen Releases** installieren
+        
+        ### 🔗 Verifikation
+        ```bash
+        # SHA256 Checksumme prüfen
+        sha256sum osCASH.me-v${{ steps.version.outputs.version }}.apk
+        
+        # Signatur verifizieren (falls verfügbar)
+        gpg --verify osCASH.me-v${{ steps.version.outputs.version }}.apk.sig
+        ```
+        
+        ### 📞 Support & Community
+        - **Issues**: [GitHub Issues](https://github.com/osCASHme/android/issues)
+        - **Discussions**: [GitHub Discussions](https://github.com/osCASHme/android/discussions)
+        - **DAO**: [recode.at Governance](https://github.com/recodeat/dao-governance)
+        - **Email**: github@recode.at
+        
+        ---
+        
+        **Wichtig**: Dies ist eine Alpha-Version für Early Adopters. Verwende sie nicht für kritische Kommunikation oder große Geldbeträge.
+        
+        *Verbunden, um frei zu SEIN* 🔒💰
+        EOF
+        
+        echo "Generated release notes for v${{ steps.version.outputs.version }}"
+        
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.version.outputs.tag }}
+        release_name: osCASH.me ${{ steps.version.outputs.tag }}
+        body_path: release_notes.md
+        draft: false
+        prerelease: ${{ contains(steps.version.outputs.version, 'alpha') || contains(steps.version.outputs.version, 'beta') || contains(steps.version.outputs.version, 'rc') }}
+        
+  notify:
+    name: Notify Community
+    runs-on: ubuntu-latest
+    needs: create-release
+    if: success()
+    
+    steps:
+    - name: Extract Version
+      id: version
+      run: |
+        TAG=${GITHUB_REF#refs/tags/}
+        VERSION=${TAG#v}
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        
+    - name: Update README Badge
+      run: |
+        echo "New release v${{ steps.version.outputs.version }} created!"
+        echo "APK will be available once build workflow completes."
+        echo "Community can now test the latest osCASH.me privacy messenger."

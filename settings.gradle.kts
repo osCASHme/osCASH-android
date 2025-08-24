@@ -7,11 +7,13 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
         maven { url = uri("https://jitpack.io") }
+        // MobileCoin dependencies
+        maven { url = uri("https://s3-us-west-1.amazonaws.com/mobilecoin.chain") }
     }
 }
 
