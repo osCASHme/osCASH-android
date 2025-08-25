@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace = "me.oscash"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "me.oscash.android"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
-        versionName = "1.0.0-alpha"
+        versionName = "1.0.0-beta"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -42,29 +42,13 @@ android {
     }
 
     lint {
-        targetSdk = 35
+        targetSdk = 33
     }
 }
 
 dependencies {
-    // osCASH.me Core modules
-    implementation(project(":oscash-core:payments-base"))
-    implementation(project(":oscash-core:addon-manager"))
-    implementation(project(":oscash-core:oscash-config"))
-    
-    // Add-ons
-    implementation(project(":addons:qr-gateway"))
-    
-    // Android essentials
-    implementation("androidx.core:core-ktx:1.15.0")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.2.0")
-    implementation("androidx.activity:activity-ktx:1.9.3")
-    
-    // Lifecycle
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+    // Minimal Android dependencies only
+    // No complex modules for now - just basic functionality
     
     // Testing
     testImplementation("junit:junit:4.13.2")

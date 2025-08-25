@@ -1,20 +1,19 @@
 package me.oscash
 
+import android.app.Activity
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         
-        // Initialize osCASH.me systems
-        initializeOsCash()
-    }
-    
-    private fun initializeOsCash() {
-        // TODO: Initialize payment systems
-        // TODO: Initialize addon manager
-        // TODO: Load configuration
+        // Create simple text view programmatically
+        val textView = TextView(this)
+        textView.text = "osCASH.me Android\nVersion 1.0.0-beta\n\nSuccessfully installed!"
+        textView.textSize = 20f
+        textView.setPadding(50, 100, 50, 100)
+        
+        setContentView(textView)
     }
 }
