@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -9,10 +9,13 @@ android {
 
     defaultConfig {
         minSdk = 26
-        targetSdk = 34
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+    }
+
+    lint {
+        targetSdk = 34
     }
 
     buildTypes {
@@ -34,20 +37,17 @@ android {
 
 dependencies {
     // Core Dependencies
-    implementation(project(":molly-core:core-util"))
-    
-    // Dependency Injection
-    implementation("com.google.dagger:dagger:2.48")
+    implementation(project(":oscash-core:payments-base"))
     
     // Android
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation("androidx.core:core-ktx:1.15.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
     
     // JSON
     implementation("org.json:json:20231013")
     
     // Testing
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
