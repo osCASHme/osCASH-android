@@ -8,8 +8,9 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "me.oscash.messenger"
+        applicationId = "me.oscash.android"
         minSdk = 26
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0.0-alpha"
 
