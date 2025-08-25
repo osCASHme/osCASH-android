@@ -97,8 +97,8 @@ jobs:
         fetch-depth: 1
         token: ${{ secrets.GITHUB_TOKEN }}
         
-    - name: Setup Java JDDŠ  
-  uses: actions/setup-java@v4
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4
       with:
         java-version: ${{ env.JAVA_VERSION }}
         distribution: 'temurin'
