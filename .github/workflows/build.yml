@@ -34,9 +34,6 @@ jobs:
         
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
-      with:
-        api-level: ${{ env.ANDROID_API_LEVEL }}
-        build-tools: ${{ env.ANDROID_BUILD_TOOLS_VERSION }}
         
     - name: Clean Gradle Cache
       run: |
@@ -81,7 +78,7 @@ jobs:
           **/build/reports/tests/
           **/build/test-results/
         retention-days: 7
-        if-no-files-found: warn
+        if-no-files-found: ignore
 
   release:
     name: Build Release APK
@@ -105,9 +102,6 @@ jobs:
         
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
-      with:
-        api-level: ${{ env.ANDROID_API_LEVEL }}
-        build-tools: ${{ env.ANDROID_BUILD_TOOLS_VERSION }}
         
     - name: Clean Gradle Cache
       run: |
@@ -172,4 +166,4 @@ jobs:
         path: |
           **/build/reports/dependency-check/
         retention-days: 30
-        if-no-files-found: warn
+        if-no-files-found: ignore
