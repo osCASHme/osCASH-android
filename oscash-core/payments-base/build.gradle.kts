@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "me.oscash.payments.base"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 26
@@ -15,7 +15,7 @@ android {
     }
 
     lint {
-        targetSdk = 34
+        targetSdk = 35
     }
 
     buildTypes {

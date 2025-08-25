@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "me.oscash.addons.qr"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 26
@@ -16,7 +16,7 @@ android {
     
     // Set target SDK for different tasks
     lint {
-        targetSdk = 34
+        targetSdk = 35
     }
 
     buildTypes {

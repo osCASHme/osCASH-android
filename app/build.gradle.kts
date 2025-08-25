@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "me.oscash"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "me.oscash.messenger"
@@ -41,7 +41,7 @@ android {
     }
 
     lint {
-        targetSdk = 34
+        targetSdk = 35
     }
 }
 

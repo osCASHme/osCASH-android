@@ -23,11 +23,11 @@ subprojects {
     afterEvaluate {
         if (plugins.hasPlugin("com.android.library")) {
             configure<com.android.build.gradle.LibraryExtension> {
-                compileSdk = 34
+                compileSdk = 35
                 
                 defaultConfig {
                     minSdk = 26
-                    targetSdk = 34
+                    targetSdk = 35
                     
                     consumerProguardFiles("consumer-rules.pro")
                 }

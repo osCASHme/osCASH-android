@@ -6,22 +6,22 @@
 package me.oscash.payments.base
 
 import android.content.Context
-import org.signal.core.util.logging.Log
-import org.whispersystems.signalservice.api.payments.Money
+import android.util.Log
+import java.math.BigDecimal
 import java.util.UUID
 
 /**
  * MobileCoin implementation of PaymentEngine
  * 
- * This class re-enables MobileCoin payments that are disabled in Molly
- * and provides the core payment functionality for osCASH.me
+ * This class provides a minimal implementation for osCASH.me payments
+ * that can be expanded with actual MobileCoin integration in the future.
  */
 class MobileCoinPaymentEngine(
     private val context: Context
 ) : PaymentEngine {
     
     companion object {
-        private val TAG = Log.tag(MobileCoinPaymentEngine::class.java)
+        private const val TAG = "MobileCoinPaymentEngine"
     }
     
     private var paymentsEnabled = false
@@ -48,28 +48,28 @@ class MobileCoinPaymentEngine(
         return paymentsEnabled
     }
     
-    override suspend fun getMobileCoinBalance(): Money.MobileCoin {
+    override suspend fun getMobileCoinBalance(): MobileCoinAmount {
         return try {
             // TODO: Implement actual MobileCoin balance fetching
             // This would normally call the MobileCoin SDK
             Log.d(TAG, "Fetching MobileCoin balance...")
-            Money.MobileCoin.ZERO
+            MobileCoinAmount.ZERO
         } catch (e: Exception) {
             Log.e(TAG, "Failed to fetch balance", e)
-            Money.MobileCoin.ZERO
+            MobileCoinAmount.ZERO
         }
     }
     
     override suspend fun createTransaction(
         recipient: String,
-        amount: Money.MobileCoin,
+        amount: MobileCoinAmount,
         memo: String?
     ): PaymentTransaction {
         if (!paymentsEnabled) {
             throw IllegalStateException("Payments not enabled")
         }
         
-        Log.i(TAG, "Creating transaction: $amount to $recipient")
+        Log.i(TAG, "Creating transaction: ${amount.toMob()} MOB to $recipient")
         
         // TODO: Implement actual MobileCoin transaction creation
         // This would normally use MobileCoin SDK to create and submit transaction
@@ -97,7 +97,7 @@ class MobileCoinPaymentEngine(
     }
     
     override fun generatePaymentRequest(
-        amount: Money.MobileCoin,
+        amount: MobileCoinAmount,
         memo: String?
     ): PaymentRequest {
         // TODO: Get actual wallet address

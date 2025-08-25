@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "me.oscash.config"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 26
@@ -18,7 +18,7 @@ android {
     }
 
     lint {
-        targetSdk = 34
+        targetSdk = 35
     }
 
     buildTypes {

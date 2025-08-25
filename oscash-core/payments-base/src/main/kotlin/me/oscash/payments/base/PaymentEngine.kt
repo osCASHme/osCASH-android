@@ -5,7 +5,6 @@
 
 package me.oscash.payments.base
 
-import org.whispersystems.signalservice.api.payments.Money
 import java.math.BigDecimal
 
 /**
@@ -30,7 +29,7 @@ interface PaymentEngine {
     /**
      * Get current MobileCoin balance
      */
-    suspend fun getMobileCoinBalance(): Money.MobileCoin
+    suspend fun getMobileCoinBalance(): MobileCoinAmount
     
     /**
      * Create a new transaction
@@ -41,7 +40,7 @@ interface PaymentEngine {
      */
     suspend fun createTransaction(
         recipient: String,
-        amount: Money.MobileCoin,
+        amount: MobileCoinAmount,
         memo: String? = null
     ): PaymentTransaction
     
@@ -54,9 +53,22 @@ interface PaymentEngine {
      * Generate a payment request QR code data
      */
     fun generatePaymentRequest(
-        amount: Money.MobileCoin,
+        amount: MobileCoinAmount,
         memo: String? = null
     ): PaymentRequest
+}
+
+/**
+ * Simplified MobileCoin amount representation
+ */
+data class MobileCoinAmount(
+    val picoMob: BigDecimal
+) {
+    companion object {
+        val ZERO = MobileCoinAmount(BigDecimal.ZERO)
+    }
+    
+    fun toMob(): BigDecimal = picoMob.divide(BigDecimal.valueOf(1_000_000_000_000L))
 }
 
 /**
@@ -66,7 +78,7 @@ data class PaymentTransaction(
     val id: String,
     val from: String,
     val to: String,
-    val amount: Money.MobileCoin,
+    val amount: MobileCoinAmount,
     val memo: String?,
     val timestamp: Long,
     val status: TransactionStatus,
@@ -88,7 +100,7 @@ enum class TransactionStatus {
  * Payment request for QR code generation
  */
 data class PaymentRequest(
-    val amount: Money.MobileCoin,
+    val amount: MobileCoinAmount,
     val recipient: String? = null,
     val memo: String? = null,
     val timestamp: Long = System.currentTimeMillis(),
