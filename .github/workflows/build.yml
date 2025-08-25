@@ -114,9 +114,9 @@ jobs:
     - name: Grant Execute Permission to Gradlew
       run: chmod +x gradlew
       
-    - name: Build Release APK
+    - name: Build Debug APK (Signed)
       run: |
-        ./gradlew clean assembleRelease \
+        ./gradlew clean assembleDebug \
           --stacktrace \
           --no-daemon \
           --continue \
@@ -125,12 +125,12 @@ jobs:
           
     - name: Rename APK
       run: |
-        find . -name "*-release*.apk" -exec cp {} osCASH.me-${{ github.event.release.tag_name }}.apk \;
+        find . -name "*-debug*.apk" -exec cp {} osCASH.me-${{ github.event.release.tag_name }}-debug.apk \;
         
     - name: Upload Release APK to GitHub Release
       uses: softprops/action-gh-release@v2
       with:
-        files: osCASH.me-${{ github.event.release.tag_name }}.apk
+        files: osCASH.me-${{ github.event.release.tag_name }}-debug.apk
         token: ${{ secrets.GITHUB_TOKEN }}
 
   security-scan:
