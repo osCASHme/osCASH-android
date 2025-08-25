@@ -1,32 +1,32 @@
-﻿2025-08-25T06:09:19.3757583Z Current runner version: '2.328.0'
-2025-08-25T06:09:19.3787620Z ##[group]Runner Image Provisioner
-2025-08-25T06:09:19.3788924Z Hosted Compute Agent
-2025-08-25T06:09:19.3789882Z Version: 20250821.380
-2025-08-25T06:09:19.3790831Z Commit: 438d12cb4fe092871db9867344e3bc0bc5319035
-2025-08-25T06:09:19.3792217Z Build Date: 2025-08-21T20:49:43Z
-2025-08-25T06:09:19.3793163Z ##[endgroup]
-2025-08-25T06:09:19.3794123Z ##[group]Operating System
-2025-08-25T06:09:19.3795052Z Ubuntu
-2025-08-25T06:09:19.3795762Z 24.04.2
-2025-08-25T06:09:19.3796608Z LTS
-2025-08-25T06:09:19.3797503Z ##[endgroup]
-2025-08-25T06:09:19.3798347Z ##[group]Runner Image
-2025-08-25T06:09:19.3799323Z Image: ubuntu-24.04
-2025-08-25T06:09:19.3800282Z Version: 20250818.1.0
-2025-08-25T06:09:19.3801989Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250818.1/images/ubuntu/Ubuntu2404-Readme.md
-2025-08-25T06:09:19.3804431Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250818.1
-2025-08-25T06:09:19.3806681Z ##[endgroup]
-2025-08-25T06:09:19.3808601Z ##[group]GITHUB_TOKEN Permissions
-2025-08-25T06:09:19.3811402Z Contents: read
-2025-08-25T06:09:19.3812240Z Metadata: read
-2025-08-25T06:09:19.3813240Z Packages: read
-2025-08-25T06:09:19.3814070Z ##[endgroup]
-2025-08-25T06:09:19.3817080Z Secret source: Actions
-2025-08-25T06:09:19.3819118Z Prepare workflow directory
-2025-08-25T06:09:19.4353458Z Prepare all required actions
-2025-08-25T06:09:19.4410214Z Getting action download info
-2025-08-25T06:09:19.7614184Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
-2025-08-25T06:09:19.8347799Z Download action repository 'actions/setup-java@v4' (SHA:c5195efecf7bdfc987ee8bae7a71cb8b11521c00)
-2025-08-25T06:09:20.1689982Z Download action repository 'android-actions/setup-android@v3' (SHA:9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407)
-2025-08-25T06:09:20.3813840Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
-2025-08-25T06:09:20.5845172Z Complete job name: Build & Test
+﻿2025-08-25T06:25:46.4651492Z Current runner version: '2.328.0'
+2025-08-25T06:25:46.4675517Z ##[group]Runner Image Provisioner
+2025-08-25T06:25:46.4676406Z Hosted Compute Agent
+2025-08-25T06:25:46.4676914Z Version: 20250821.380
+2025-08-25T06:25:46.4677487Z Commit: 438d12cb4fe092871db9867344e3bc0bc5319035
+2025-08-25T06:25:46.4678206Z Build Date: 2025-08-21T20:49:43Z
+2025-08-25T06:25:46.4678791Z ##[endgroup]
+2025-08-25T06:25:46.4679302Z ##[group]Operating System
+2025-08-25T06:25:46.4679902Z Ubuntu
+2025-08-25T06:25:46.4680336Z 24.04.2
+2025-08-25T06:25:46.4680792Z LTS
+2025-08-25T06:25:46.4681239Z ##[endgroup]
+2025-08-25T06:25:46.4681743Z ##[group]Runner Image
+2025-08-25T06:25:46.4682305Z Image: ubuntu-24.04
+2025-08-25T06:25:46.4682960Z Version: 20250818.1.0
+2025-08-25T06:25:46.4683970Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250818.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-08-25T06:25:46.4685345Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250818.1
+2025-08-25T06:25:46.4687208Z ##[endgroup]
+2025-08-25T06:25:46.4688444Z ##[group]GITHUB_TOKEN Permissions
+2025-08-25T06:25:46.4690565Z Contents: read
+2025-08-25T06:25:46.4691121Z Metadata: read
+2025-08-25T06:25:46.4691650Z Packages: read
+2025-08-25T06:25:46.4692160Z ##[endgroup]
+2025-08-25T06:25:46.4694425Z Secret source: Actions
+2025-08-25T06:25:46.4696039Z Prepare workflow directory
+2025-08-25T06:25:46.5075068Z Prepare all required actions
+2025-08-25T06:25:46.5112356Z Getting action download info
+2025-08-25T06:25:46.8346839Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-08-25T06:25:46.9086080Z Download action repository 'actions/setup-java@v4' (SHA:c5195efecf7bdfc987ee8bae7a71cb8b11521c00)
+2025-08-25T06:25:47.2542039Z Download action repository 'android-actions/setup-android@v3' (SHA:9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407)
+2025-08-25T06:25:47.4540282Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-08-25T06:25:47.7189136Z Complete job name: Build & Test

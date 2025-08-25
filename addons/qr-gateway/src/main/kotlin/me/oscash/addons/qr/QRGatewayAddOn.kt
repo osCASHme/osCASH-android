@@ -7,6 +7,7 @@ package me.oscash.addons.qr
 
 import android.content.Context
 import android.graphics.Bitmap
+import android.util.Log
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.WriterException
 import com.journeyapps.barcodescanner.BarcodeEncoder
@@ -15,9 +16,9 @@ import me.oscash.addon.Capability
 import me.oscash.addon.CapabilityType
 import me.oscash.addon.HealthStatus
 import me.oscash.payments.base.PaymentRequest
+import me.oscash.payments.base.MobileCoinAmount
 import org.json.JSONObject
-import org.signal.core.util.logging.Log
-import org.whispersystems.signalservice.api.payments.Money
+import java.math.BigDecimal
 
 /**
  * QR Gateway Add-On for osCASH.me
@@ -28,7 +29,7 @@ import org.whispersystems.signalservice.api.payments.Money
 class QRGatewayAddOn : AddOn {
     
     companion object {
-        private val TAG = Log.tag(QRGatewayAddOn::class.java)
+        private const val TAG = "QRGatewayAddOn"
         private const val QR_VERSION = "1.0"
     }
     
@@ -146,7 +147,7 @@ class QRGatewayAddOn : AddOn {
             put("ts", paymentRequest.timestamp) // Timestamp
             
             // Amount (always in smallest unit)
-            put("amount", paymentRequest.amount.serialize())
+            put("amount", paymentRequest.amount.picoMob.toString())
             put("currency", "MOB")
             
             // Optional fields
@@ -166,7 +167,7 @@ class QRGatewayAddOn : AddOn {
             put("source", "oscash.me")
         }
         
-        return "oscash:${qrPayload}"
+        return "oscash:$qrPayload"
     }
     
     /**
@@ -197,7 +198,7 @@ class QRGatewayAddOn : AddOn {
         val json = JSONObject(jsonData)
         
         return UniversalPaymentRequest(
-            amount = Money.parse(json.getString("amount")),
+            amount = MobileCoinAmount(BigDecimal(json.getString("amount"))),
             currency = json.optString("currency", "MOB"),
             recipient = json.optString("recipient"),
             memo = json.optString("memo"),
@@ -258,7 +259,7 @@ class QRGatewayAddOn : AddOn {
  * Universal payment request that supports multiple payment methods
  */
 data class UniversalPaymentRequest(
-    val amount: Money,
+    val amount: MobileCoinAmount,
     val currency: String,
     val recipient: String?,
     val memo: String?,

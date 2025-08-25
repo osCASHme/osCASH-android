@@ -17,7 +17,7 @@ object OsCashConfig {
      * osCASH.me version information
      */
     const val VERSION = BuildConfig.OSCASH_VERSION
-    const val MOLLY_VERSION = BuildConfig.MOLLY_VERSION
+    const val MOLLY_VERSION = "7.53.4"
     const val BUILD_FLAVOR = "oscash"
     
     /**
@@ -110,8 +110,8 @@ object OsCashConfig {
      */
     object Debug {
         const val ENABLE_ADDON_DEBUG_LOGS = true
-        const val ENABLE_PAYMENT_DEBUG_LOGS = BuildConfig.DEBUG
-        const val MOCK_PAYMENT_RESPONSES = BuildConfig.DEBUG
+        val ENABLE_PAYMENT_DEBUG_LOGS = BuildConfig.DEBUG
+        val MOCK_PAYMENT_RESPONSES = BuildConfig.DEBUG
     }
     
     /**
