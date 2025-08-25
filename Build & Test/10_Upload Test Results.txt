@@ -1,22 +1,22 @@
-﻿2025-08-25T06:29:46.4053172Z ##[group]Run actions/upload-artifact@v4
-2025-08-25T06:29:46.4053477Z with:
-2025-08-25T06:29:46.4053724Z   name: test-results-c7c8bf1675b50673ba21c0abd9405378fe85be2e
-2025-08-25T06:29:46.4054099Z   path: **/build/reports/tests/
+﻿2025-08-25T11:56:54.5188249Z ##[group]Run actions/upload-artifact@v4
+2025-08-25T11:56:54.5188538Z with:
+2025-08-25T11:56:54.5188772Z   name: test-results-364524df825859c640aedc3e95681e871bcccd5a
+2025-08-25T11:56:54.5189122Z   path: **/build/reports/tests/
 **/build/test-results/
 
-2025-08-25T06:29:46.4054585Z   retention-days: 7
-2025-08-25T06:29:46.4054778Z   if-no-files-found: warn
-2025-08-25T06:29:46.4054986Z   compression-level: 6
-2025-08-25T06:29:46.4055171Z   overwrite: false
-2025-08-25T06:29:46.4055361Z   include-hidden-files: false
-2025-08-25T06:29:46.4055560Z env:
-2025-08-25T06:29:46.4055718Z   JAVA_VERSION: 17
-2025-08-25T06:29:46.4055891Z   ANDROID_API_LEVEL: 35
-2025-08-25T06:29:46.4056094Z   ANDROID_BUILD_TOOLS_VERSION: 34.0.0
-2025-08-25T06:29:46.4056429Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-25T06:29:46.4056860Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-25T06:29:46.4057214Z   ANDROID_HOME: /usr/local/lib/android/sdk
-2025-08-25T06:29:46.4057505Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
-2025-08-25T06:29:46.4057744Z ##[endgroup]
-2025-08-25T06:29:47.7010744Z ##[warning]No files were found with the provided path: **/build/reports/tests/
-**/build/test-results/. No artifacts will be uploaded.
+2025-08-25T11:56:54.5189389Z   retention-days: 7
+2025-08-25T11:56:54.5189574Z   if-no-files-found: ignore
+2025-08-25T11:56:54.5189769Z   compression-level: 6
+2025-08-25T11:56:54.5189948Z   overwrite: false
+2025-08-25T11:56:54.5190128Z   include-hidden-files: false
+2025-08-25T11:56:54.5190324Z env:
+2025-08-25T11:56:54.5190490Z   JAVA_VERSION: 17
+2025-08-25T11:56:54.5190654Z   ANDROID_API_LEVEL: 35
+2025-08-25T11:56:54.5190847Z   ANDROID_BUILD_TOOLS_VERSION: 34.0.0
+2025-08-25T11:56:54.5191165Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-25T11:56:54.5191588Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-25T11:56:54.5191930Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2025-08-25T11:56:54.5192210Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2025-08-25T11:56:54.5192440Z ##[endgroup]
+2025-08-25T11:56:55.6953862Z No files were found with the provided path: **/build/reports/tests/
+2025-08-25T11:56:55.6954678Z **/build/test-results/. No artifacts will be uploaded.

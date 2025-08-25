@@ -1,0 +1,32 @@
+﻿2025-08-25T06:58:19.9108974Z Current runner version: '2.328.0'
+2025-08-25T06:58:19.9144922Z ##[group]Runner Image Provisioner
+2025-08-25T06:58:19.9146171Z Hosted Compute Agent
+2025-08-25T06:58:19.9147053Z Version: 20250821.380
+2025-08-25T06:58:19.9148067Z Commit: 438d12cb4fe092871db9867344e3bc0bc5319035
+2025-08-25T06:58:19.9149414Z Build Date: 2025-08-21T20:49:43Z
+2025-08-25T06:58:19.9150546Z ##[endgroup]
+2025-08-25T06:58:19.9151501Z ##[group]Operating System
+2025-08-25T06:58:19.9152495Z Ubuntu
+2025-08-25T06:58:19.9153288Z 24.04.2
+2025-08-25T06:58:19.9154031Z LTS
+2025-08-25T06:58:19.9154804Z ##[endgroup]
+2025-08-25T06:58:19.9155786Z ##[group]Runner Image
+2025-08-25T06:58:19.9156790Z Image: ubuntu-24.04
+2025-08-25T06:58:19.9157590Z Version: 20250818.1.0
+2025-08-25T06:58:19.9159645Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250818.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-08-25T06:58:19.9162124Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250818.1
+2025-08-25T06:58:19.9164168Z ##[endgroup]
+2025-08-25T06:58:19.9166228Z ##[group]GITHUB_TOKEN Permissions
+2025-08-25T06:58:19.9168952Z Contents: read
+2025-08-25T06:58:19.9169898Z Metadata: read
+2025-08-25T06:58:19.9171451Z Packages: read
+2025-08-25T06:58:19.9172264Z ##[endgroup]
+2025-08-25T06:58:19.9175175Z Secret source: Actions
+2025-08-25T06:58:19.9176363Z Prepare workflow directory
+2025-08-25T06:58:19.9737744Z Prepare all required actions
+2025-08-25T06:58:19.9796390Z Getting action download info
+2025-08-25T06:58:20.2566635Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-08-25T06:58:20.3312240Z Download action repository 'actions/setup-java@v4' (SHA:c5195efecf7bdfc987ee8bae7a71cb8b11521c00)
+2025-08-25T06:58:20.7212694Z Download action repository 'android-actions/setup-android@v3' (SHA:9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407)
+2025-08-25T06:58:21.0100584Z Download action repository 'actions/upload-release-asset@v1' (SHA:e8f9f06c4b078e705bd2ea027f0926603fc9b4d5)
+2025-08-25T06:58:21.3847170Z Complete job name: Build Release APK

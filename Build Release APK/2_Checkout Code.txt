@@ -1,0 +1,115 @@
+﻿2025-08-25T06:58:21.4643579Z ##[group]Run actions/checkout@v4
+2025-08-25T06:58:21.4644912Z with:
+2025-08-25T06:58:21.4645657Z   submodules: recursive
+2025-08-25T06:58:21.4646498Z   fetch-depth: 1
+2025-08-25T06:58:21.4647630Z   token: ***
+2025-08-25T06:58:21.4648603Z   repository: osCASHme/android
+2025-08-25T06:58:21.4649564Z   ssh-strict: true
+2025-08-25T06:58:21.4650342Z   ssh-user: git
+2025-08-25T06:58:21.4651133Z   persist-credentials: true
+2025-08-25T06:58:21.4652009Z   clean: true
+2025-08-25T06:58:21.4652827Z   sparse-checkout-cone-mode: true
+2025-08-25T06:58:21.4653796Z   fetch-tags: false
+2025-08-25T06:58:21.4654584Z   show-progress: true
+2025-08-25T06:58:21.4655409Z   lfs: false
+2025-08-25T06:58:21.4656156Z   set-safe-directory: true
+2025-08-25T06:58:21.4657265Z env:
+2025-08-25T06:58:21.4657973Z   JAVA_VERSION: 17
+2025-08-25T06:58:21.4658932Z   ANDROID_API_LEVEL: 35
+2025-08-25T06:58:21.4659805Z   ANDROID_BUILD_TOOLS_VERSION: 34.0.0
+2025-08-25T06:58:21.4660791Z ##[endgroup]
+2025-08-25T06:58:21.5756151Z Syncing repository: osCASHme/android
+2025-08-25T06:58:21.5759183Z ##[group]Getting Git version info
+2025-08-25T06:58:21.5760602Z Working directory is '/home/runner/work/android/android'
+2025-08-25T06:58:21.5762472Z [command]/usr/bin/git version
+2025-08-25T06:58:21.5781738Z git version 2.51.0
+2025-08-25T06:58:21.5808806Z ##[endgroup]
+2025-08-25T06:58:21.5830964Z Temporarily overriding HOME='/home/runner/work/_temp/d70945d3-6c09-4bed-9a13-48075cf0b947' before making global git config changes
+2025-08-25T06:58:21.5835825Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-25T06:58:21.5839779Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android/android
+2025-08-25T06:58:21.5871458Z Deleting the contents of '/home/runner/work/android/android'
+2025-08-25T06:58:21.5876091Z ##[group]Initializing the repository
+2025-08-25T06:58:21.5880922Z [command]/usr/bin/git init /home/runner/work/android/android
+2025-08-25T06:58:21.5952871Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-08-25T06:58:21.5955588Z hint: is subject to change. To configure the initial branch name to use in all
+2025-08-25T06:58:21.5958812Z hint: of your new repositories, which will suppress this warning, call:
+2025-08-25T06:58:21.5961216Z hint:
+2025-08-25T06:58:21.5962808Z hint: 	git config --global init.defaultBranch <name>
+2025-08-25T06:58:21.5964750Z hint:
+2025-08-25T06:58:21.5966638Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-08-25T06:58:21.5970056Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-08-25T06:58:21.5972457Z hint:
+2025-08-25T06:58:21.5973716Z hint: 	git branch -m <name>
+2025-08-25T06:58:21.5975204Z hint:
+2025-08-25T06:58:21.5976467Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-08-25T06:58:21.5978678Z Initialized empty Git repository in /home/runner/work/android/android/.git/
+2025-08-25T06:58:21.5983945Z [command]/usr/bin/git remote add origin https://github.com/osCASHme/android
+2025-08-25T06:58:21.6006714Z ##[endgroup]
+2025-08-25T06:58:21.6008417Z ##[group]Disabling automatic garbage collection
+2025-08-25T06:58:21.6009850Z [command]/usr/bin/git config --local gc.auto 0
+2025-08-25T06:58:21.6038033Z ##[endgroup]
+2025-08-25T06:58:21.6040836Z ##[group]Setting up auth
+2025-08-25T06:58:21.6045501Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-25T06:58:21.6077869Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-25T06:58:21.6355371Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-25T06:58:21.6386621Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-25T06:58:21.6603172Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-25T06:58:21.6638792Z ##[endgroup]
+2025-08-25T06:58:21.6640363Z ##[group]Fetching the repository
+2025-08-25T06:58:21.6647363Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +aad615fd4be9e6384c458a789ae40bd4c23776c6:refs/tags/v1.0.0-beta
+2025-08-25T06:58:21.9113749Z From https://github.com/osCASHme/android
+2025-08-25T06:58:21.9117853Z  * [new ref]         aad615fd4be9e6384c458a789ae40bd4c23776c6 -> v1.0.0-beta
+2025-08-25T06:58:21.9144973Z ##[endgroup]
+2025-08-25T06:58:21.9147523Z ##[group]Determining the checkout info
+2025-08-25T06:58:21.9150719Z ##[endgroup]
+2025-08-25T06:58:21.9152372Z [command]/usr/bin/git sparse-checkout disable
+2025-08-25T06:58:21.9192842Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-08-25T06:58:21.9222271Z ##[group]Checking out the ref
+2025-08-25T06:58:21.9226652Z [command]/usr/bin/git checkout --progress --force refs/tags/v1.0.0-beta
+2025-08-25T06:58:21.9463878Z Note: switching to 'refs/tags/v1.0.0-beta'.
+2025-08-25T06:58:21.9466655Z 
+2025-08-25T06:58:21.9467999Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-08-25T06:58:21.9470333Z changes and commit them, and you can discard any commits you make in this
+2025-08-25T06:58:21.9472137Z state without impacting any branches by switching back to a branch.
+2025-08-25T06:58:21.9473495Z 
+2025-08-25T06:58:21.9474299Z If you want to create a new branch to retain commits you create, you may
+2025-08-25T06:58:21.9475925Z do so (now or later) by using -c with the switch command. Example:
+2025-08-25T06:58:21.9476883Z 
+2025-08-25T06:58:21.9477371Z   git switch -c <new-branch-name>
+2025-08-25T06:58:21.9478028Z 
+2025-08-25T06:58:21.9478763Z Or undo this operation with:
+2025-08-25T06:58:21.9480057Z 
+2025-08-25T06:58:21.9480941Z   git switch -
+2025-08-25T06:58:21.9481641Z 
+2025-08-25T06:58:21.9482628Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-08-25T06:58:21.9483941Z 
+2025-08-25T06:58:21.9484429Z HEAD is now at aad615f Fix GitHub Actions warnings
+2025-08-25T06:58:21.9487513Z ##[endgroup]
+2025-08-25T06:58:21.9489376Z ##[group]Setting up auth for fetching submodules
+2025-08-25T06:58:21.9491481Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-25T06:58:21.9524818Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-08-25T06:58:21.9553195Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-08-25T06:58:21.9582885Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-228373083@github.com:
+2025-08-25T06:58:21.9609477Z ##[endgroup]
+2025-08-25T06:58:21.9611182Z ##[group]Fetching submodules
+2025-08-25T06:58:21.9612975Z [command]/usr/bin/git submodule sync --recursive
+2025-08-25T06:58:21.9844522Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-08-25T06:58:22.0066307Z Submodule 'molly-core' (https://github.com/mollyim/mollyim-android.git) registered for path 'molly-core'
+2025-08-25T06:58:22.0091507Z Cloning into '/home/runner/work/android/android/molly-core'...
+2025-08-25T06:58:31.7052404Z Submodule path 'molly-core': checked out '80d175f26ace0f58d8e3fcefa8ffcc3a750e60ed'
+2025-08-25T06:58:31.7101147Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-08-25T06:58:31.7309093Z Entering 'molly-core'
+2025-08-25T06:58:31.7369124Z ##[endgroup]
+2025-08-25T06:58:31.7369777Z ##[group]Persisting credentials for submodules
+2025-08-25T06:58:31.7378403Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-08-25T06:58:31.7584398Z Entering 'molly-core'
+2025-08-25T06:58:31.7651071Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-08-25T06:58:31.7852617Z Entering 'molly-core'
+2025-08-25T06:58:31.7889442Z file:/home/runner/work/android/android/.git/modules/molly-core/config	remote.origin.url
+2025-08-25T06:58:31.7940521Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-08-25T06:58:31.8143005Z Entering 'molly-core'
+2025-08-25T06:58:31.8204016Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-228373083@github.com:'
+2025-08-25T06:58:31.8406345Z Entering 'molly-core'
+2025-08-25T06:58:31.8463180Z ##[endgroup]
+2025-08-25T06:58:31.8500709Z [command]/usr/bin/git log -1 --format=%H
+2025-08-25T06:58:31.8521090Z aad615fd4be9e6384c458a789ae40bd4c23776c6

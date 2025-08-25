@@ -1,13 +1,13 @@
-﻿2025-08-25T06:26:36.9130036Z ##[group]Run rm -rf ~/.gradle/caches/* || true
-2025-08-25T06:26:36.9130428Z [36;1mrm -rf ~/.gradle/caches/* || true[0m
-2025-08-25T06:26:36.9130699Z [36;1mrm -rf .gradle/* || true[0m
-2025-08-25T06:26:36.9205561Z shell: /usr/bin/bash -e {0}
-2025-08-25T06:26:36.9205819Z env:
-2025-08-25T06:26:36.9205987Z   JAVA_VERSION: 17
-2025-08-25T06:26:36.9206175Z   ANDROID_API_LEVEL: 35
-2025-08-25T06:26:36.9206396Z   ANDROID_BUILD_TOOLS_VERSION: 34.0.0
-2025-08-25T06:26:36.9206741Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-25T06:26:36.9207197Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-25T06:26:36.9207572Z   ANDROID_HOME: /usr/local/lib/android/sdk
-2025-08-25T06:26:36.9207838Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
-2025-08-25T06:26:36.9208083Z ##[endgroup]
+﻿2025-08-25T11:54:25.7660161Z ##[group]Run rm -rf ~/.gradle/caches/* || true
+2025-08-25T11:54:25.7660549Z [36;1mrm -rf ~/.gradle/caches/* || true[0m
+2025-08-25T11:54:25.7660803Z [36;1mrm -rf .gradle/* || true[0m
+2025-08-25T11:54:25.7732825Z shell: /usr/bin/bash -e {0}
+2025-08-25T11:54:25.7733062Z env:
+2025-08-25T11:54:25.7733222Z   JAVA_VERSION: 17
+2025-08-25T11:54:25.7733417Z   ANDROID_API_LEVEL: 35
+2025-08-25T11:54:25.7733632Z   ANDROID_BUILD_TOOLS_VERSION: 34.0.0
+2025-08-25T11:54:25.7733963Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-25T11:54:25.7734394Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-25T11:54:25.7734741Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2025-08-25T11:54:25.7734995Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2025-08-25T11:54:25.7735231Z ##[endgroup]

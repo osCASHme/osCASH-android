@@ -7,7 +7,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="osCASH.me"
-        android:theme="@android:style/Theme.Material.Light.DarkActionBar">
+        android:theme="@android:style/Theme.Black">
         <activity
             android:name=".MainActivity"
             android:exported="true">

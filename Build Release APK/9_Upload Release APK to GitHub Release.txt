@@ -1,0 +1,17 @@
+﻿2025-08-25T07:02:32.5567317Z ##[group]Run actions/upload-release-asset@v1
+2025-08-25T07:02:32.5567598Z with:
+2025-08-25T07:02:32.5567975Z   upload_url: https://uploads.github.com/repos/osCASHme/android/releases/242176141/assets{?name,label}
+2025-08-25T07:02:32.5568654Z   asset_path: osCASH.me-v1.0.0-beta.apk
+2025-08-25T07:02:32.5568912Z   asset_name: osCASH.me-v1.0.0-beta.apk
+2025-08-25T07:02:32.5569219Z   asset_content_type: application/vnd.android.package-archive
+2025-08-25T07:02:32.5569511Z env:
+2025-08-25T07:02:32.5569662Z   JAVA_VERSION: 17
+2025-08-25T07:02:32.5569845Z   ANDROID_API_LEVEL: 35
+2025-08-25T07:02:32.5570055Z   ANDROID_BUILD_TOOLS_VERSION: 34.0.0
+2025-08-25T07:02:32.5570384Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-25T07:02:32.5570809Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-25T07:02:32.5571150Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2025-08-25T07:02:32.5571409Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2025-08-25T07:02:32.5571957Z   GITHUB_TOKEN: ***
+2025-08-25T07:02:32.5572144Z ##[endgroup]
+2025-08-25T07:02:33.0585406Z ##[error]Resource not accessible by integration
