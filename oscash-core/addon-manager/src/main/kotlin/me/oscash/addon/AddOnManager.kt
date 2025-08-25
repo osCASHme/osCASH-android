@@ -9,7 +9,7 @@ import android.content.Context
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import org.signal.core.util.logging.Log
+import android.util.Log
 
 /**
  * Central manager for all osCASH.me Add-Ons
@@ -20,7 +20,7 @@ import org.signal.core.util.logging.Log
 class AddOnManager(private val context: Context) {
     
     companion object {
-        private val TAG = Log.tag(AddOnManager::class.java)
+        private const val TAG = "AddOnManager"
     }
     
     private val _loadedAddOns = mutableMapOf<String, AddOn>()
@@ -106,7 +106,8 @@ class AddOnManager(private val context: Context) {
     /**
      * Get a specific add-on by ID
      */
-    inline fun <reified T : AddOn> getAddOn(id: String): T? {
+    fun <T : AddOn> getAddOn(id: String): T? {
+        @Suppress("UNCHECKED_CAST")
         return _loadedAddOns[id] as? T
     }
     

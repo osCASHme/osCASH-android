@@ -1,15 +1,15 @@
-﻿2025-08-25T05:43:23.1938901Z Post job cleanup.
-2025-08-25T05:43:23.2885334Z [command]/usr/bin/git version
-2025-08-25T05:43:23.2925634Z git version 2.51.0
-2025-08-25T05:43:23.2969194Z Temporarily overriding HOME='/home/runner/work/_temp/ab92eb4d-6f42-43c2-aebb-df2462f1ef2d' before making global git config changes
-2025-08-25T05:43:23.2970597Z Adding repository directory to the temporary git global config as a safe directory
-2025-08-25T05:43:23.2982170Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android/android
-2025-08-25T05:43:23.3017516Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-08-25T05:43:23.3050474Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-08-25T05:43:23.3256853Z Entering 'molly-core'
-2025-08-25T05:43:23.3327807Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-08-25T05:43:23.3347675Z http.https://github.com/.extraheader
-2025-08-25T05:43:23.3360086Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2025-08-25T05:43:23.3389452Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2025-08-25T05:43:23.3591628Z Entering 'molly-core'
-2025-08-25T05:43:23.3614747Z http.https://github.com/.extraheader
+﻿2025-08-25T06:12:51.0001871Z Post job cleanup.
+2025-08-25T06:12:51.1061602Z [command]/usr/bin/git version
+2025-08-25T06:12:51.1101413Z git version 2.51.0
+2025-08-25T06:12:51.1146605Z Temporarily overriding HOME='/home/runner/work/_temp/3e3b6e21-952e-4139-9bc8-704a87763cf6' before making global git config changes
+2025-08-25T06:12:51.1148109Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-25T06:12:51.1159345Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/android/android
+2025-08-25T06:12:51.1193825Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-25T06:12:51.1225298Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-25T06:12:51.1443462Z Entering 'molly-core'
+2025-08-25T06:12:51.1521088Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-25T06:12:51.1544353Z http.https://github.com/.extraheader
+2025-08-25T06:12:51.1561966Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-08-25T06:12:51.1597671Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-25T06:12:51.1822066Z Entering 'molly-core'
+2025-08-25T06:12:51.1846608Z http.https://github.com/.extraheader

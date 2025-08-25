@@ -1,18 +1,18 @@
-﻿2025-08-25T05:45:10.2329478Z ##[group]Run actions/upload-artifact@v4
-2025-08-25T05:45:10.2329794Z with:
-2025-08-25T05:45:10.2330051Z   name: security-report-d808de0b46a36c1b0196e764494e072e1a98e522
-2025-08-25T05:45:10.2330403Z   path: **/build/reports/dependency-check/
+﻿2025-08-25T06:14:08.6271576Z ##[group]Run actions/upload-artifact@v4
+2025-08-25T06:14:08.6271897Z with:
+2025-08-25T06:14:08.6272152Z   name: security-report-0b8673ac0d2a57d4e0301f8677eb9dbac09d1dc8
+2025-08-25T06:14:08.6272500Z   path: **/build/reports/dependency-check/
 
-2025-08-25T05:45:10.2330663Z   retention-days: 30
-2025-08-25T05:45:10.2330866Z   if-no-files-found: warn
-2025-08-25T05:45:10.2331069Z   compression-level: 6
-2025-08-25T05:45:10.2331265Z   overwrite: false
-2025-08-25T05:45:10.2331456Z   include-hidden-files: false
-2025-08-25T05:45:10.2331667Z env:
-2025-08-25T05:45:10.2331829Z   JAVA_VERSION: 17
-2025-08-25T05:45:10.2332004Z   ANDROID_API_LEVEL: 34
-2025-08-25T05:45:10.2332213Z   ANDROID_BUILD_TOOLS_VERSION: 34.0.0
-2025-08-25T05:45:10.2332551Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-25T05:45:10.2332992Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-2025-08-25T05:45:10.2333333Z ##[endgroup]
-2025-08-25T05:45:10.4638003Z ##[warning]No files were found with the provided path: **/build/reports/dependency-check/. No artifacts will be uploaded.
+2025-08-25T06:14:08.6272750Z   retention-days: 30
+2025-08-25T06:14:08.6272949Z   if-no-files-found: warn
+2025-08-25T06:14:08.6273146Z   compression-level: 6
+2025-08-25T06:14:08.6273334Z   overwrite: false
+2025-08-25T06:14:08.6273518Z   include-hidden-files: false
+2025-08-25T06:14:08.6273730Z env:
+2025-08-25T06:14:08.6273888Z   JAVA_VERSION: 17
+2025-08-25T06:14:08.6274055Z   ANDROID_API_LEVEL: 35
+2025-08-25T06:14:08.6274256Z   ANDROID_BUILD_TOOLS_VERSION: 34.0.0
+2025-08-25T06:14:08.6274577Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-25T06:14:08.6275011Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-25T06:14:08.6275334Z ##[endgroup]
+2025-08-25T06:14:08.8837706Z ##[warning]No files were found with the provided path: **/build/reports/dependency-check/. No artifacts will be uploaded.
