@@ -27,9 +27,12 @@ subprojects {
                 
                 defaultConfig {
                     minSdk = 26
-                    targetSdk = 35
                     
                     consumerProguardFiles("consumer-rules.pro")
+                }
+                
+                lint {
+                    targetSdk = 35
                 }
                 
                 compileOptions {
