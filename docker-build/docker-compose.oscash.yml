@@ -4,7 +4,7 @@ services:
     build:
       context: ..
       dockerfile: docker-build/Dockerfile.oscash  
-    command: :molly-core:app:assembleDebug --no-daemon
+    command: :molly-core:app:assembleProdFossWebsiteRelease --no-daemon
     volumes:
       - ./certs:/oscash/molly-core/app/certs:ro
       - ./outputs:/oscash/molly-core/app/build/outputs
@@ -19,3 +19,16 @@ services:
       - CI_KEYSTORE_PATH
       - CI_KEYSTORE_PASSWORD
       - CI_KEYSTORE_ALIAS
+  
+  tasks:
+    image: reproducible-oscash
+    build:
+      context: ..
+      dockerfile: docker-build/Dockerfile.oscash  
+    command: :molly-core:app:tasks --all --no-daemon
+    environment:
+      - GRADLE_OPTS
+      - CI_APP_TITLE
+      - CI_APP_FILENAME
+      - CI_PACKAGE_ID
+      - CI_BUILD_VARIANTS
