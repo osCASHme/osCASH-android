@@ -1,0 +1,71 @@
+# osCASH.me Android Project - Git Ignore
+# Privacy First. Swiss Clockwork Reliability.
+
+# APK Files (except releases)
+*.apk
+!releases/*.apk
+
+# Archive and Temporary Files
+archive/
+temp/
+tmp/
+*.tmp
+
+# Build Outputs
+build/
+.gradle/
+*/build/
+.idea/
+*.iml
+
+# Android Studio
+local.properties
+.DS_Store
+
+# Log Files
+*.log
+*-logs/
+logs/
+*.zip
+
+# Keystore Files (Security!)
+*.keystore
+*.jks
+!reproducible-builds/certs/*.keystore
+
+# Environment Files
+.env
+.env.local
+.env.production
+
+# Docker Volumes
+docker-volumes/
+
+# IDE Files
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS Files
+Thumbs.db
+.DS_Store
+
+# Backup Files
+*.backup
+*.bak
+
+# Test Results
+test-results/
+coverage/
+
+# Node modules (if any)
+node_modules/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Documentation Generation
+docs/build/
+site/

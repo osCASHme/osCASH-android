@@ -1,2 +1,0 @@
-﻿2025-08-25T11:56:56.0852494Z Cleaning up orphan processes
-2025-08-25T11:56:56.1125121Z Terminate orphan process: pid (2954) (java)
