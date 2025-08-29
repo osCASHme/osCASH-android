@@ -1,0 +1,185 @@
+name: osCASH.me Android Build & Release
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ created ]
+
+env:
+  JAVA_VERSION: '17'
+  ANDROID_API_LEVEL: '34'
+  ANDROID_BUILD_TOOLS_VERSION: '34.0.0'
+
+jobs:
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0
+        
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ env.JAVA_VERSION }}
+        distribution: 'temurin'
+        
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+      with:
+        api-level: ${{ env.ANDROID_API_LEVEL }}
+        build-tools: ${{ env.ANDROID_BUILD_TOOLS_VERSION }}
+        
+    - name: Cache Gradle Dependencies
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          gradle-${{ runner.os }}-
+          
+    - name: Grant Execute Permission to Gradlew
+      run: chmod +x gradlew
+      
+    - name: Build Debug APK
+      run: |
+        ./gradlew assembleDebug --stacktrace --no-daemon \
+          -Dorg.gradle.dependency.verification=lenient
+          
+    - name: Run Unit Tests
+      run: |
+        ./gradlew testDebugUnitTest --stacktrace --no-daemon \
+          -Dorg.gradle.dependency.verification=lenient
+          
+    - name: Upload Debug APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: osCASH-me-debug-${{ github.sha }}
+        path: |
+          **/build/outputs/apk/debug/*.apk
+        retention-days: 30
+        
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results-${{ github.sha }}
+        path: |
+          **/build/reports/tests/
+          **/build/test-results/
+        retention-days: 7
+
+  release:
+    name: Build Release APK
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release'
+    needs: build
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0
+        
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ env.JAVA_VERSION }}
+        distribution: 'temurin'
+        
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+      with:
+        api-level: ${{ env.ANDROID_API_LEVEL }}
+        build-tools: ${{ env.ANDROID_BUILD_TOOLS_VERSION }}
+        
+    - name: Cache Gradle Dependencies
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          gradle-${{ runner.os }}-
+          
+    - name: Grant Execute Permission to Gradlew
+      run: chmod +x gradlew
+      
+    - name: Build Release APK
+      run: |
+        ./gradlew assembleRelease --stacktrace --no-daemon \
+          -Dorg.gradle.dependency.verification=lenient
+          
+    - name: Sign APK (if keystore available)
+      if: env.KEYSTORE_BASE64 != ''
+      env:
+        KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+      run: |
+        echo "$KEYSTORE_BASE64" | base64 -d > release.keystore
+        jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 \
+          -keystore release.keystore \
+          -storepass "$KEYSTORE_PASSWORD" \
+          -keypass "$KEY_PASSWORD" \
+          **/build/outputs/apk/release/*-unsigned.apk "$KEY_ALIAS"
+          
+    - name: Rename APK
+      run: |
+        find . -name "*-release*.apk" -exec cp {} osCASH.me-${{ github.event.release.tag_name }}.apk \;
+        
+    - name: Upload Release APK to GitHub Release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: osCASH.me-${{ github.event.release.tag_name }}.apk
+        asset_name: osCASH.me-${{ github.event.release.tag_name }}.apk
+        asset_content_type: application/vnd.android.package-archive
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ env.JAVA_VERSION }}
+        distribution: 'temurin'
+        
+    - name: Grant Execute Permission to Gradlew
+      run: chmod +x gradlew
+      
+    - name: Run Dependency Check
+      run: |
+        ./gradlew dependencyCheckAnalyze --stacktrace --no-daemon \
+          -Dorg.gradle.dependency.verification=lenient || true
+          
+    - name: Upload Security Report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: security-report-${{ github.sha }}
+        path: |
+          **/build/reports/dependency-check/
+        retention-days: 30

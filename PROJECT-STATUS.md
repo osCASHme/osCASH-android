@@ -1,6 +1,11 @@
-# 📊 osCASH.me Project Status
+# osCASH.me - Project Status
 
-> Stand: 24. August 2024
+**Stand: 28. August 2025, 21:00 Uhr**
+
+## 🎯 Mission
+
+**Privacy-First Messenger mit integrierter Kryptowährungswallet**  
+*"Verbunden, um frei zu SEIN"* 🔒💰
 
 ## ✅ Abgeschlossen
 
