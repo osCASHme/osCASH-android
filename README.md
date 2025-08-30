@@ -78,6 +78,12 @@ cd android
 
 ## 🤝 Entwicklung & Beitragen
 
+### Community
+- **GitHub Wiki**: [github.com/osCASHme/android/wiki](https://github.com/osCASHme/android/wiki)
+- **GitHub Discussions**: [github.com/osCASHme/android/discussions](https://github.com/osCASHme/android/discussions)
+- **Issues**: [github.com/osCASHme/android/issues](https://github.com/osCASHme/android/issues)
+- **Reproducible Builds**: [REPRODUCIBLE-BUILDS.md](REPRODUCIBLE-BUILDS.md)
+
 ### Voraussetzungen
 ```bash
 # Android SDK

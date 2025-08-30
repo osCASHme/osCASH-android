@@ -115,7 +115,7 @@ enableV4Signing = false  // Disabled like original Molly
 
 ### Schritt 1: Environment Setup
 ```bash
-cd /home/mayer/prog/claude/osCASH.me/android/molly-core/reproducible-builds
+cd ~/prog/claude/osCASH.me/android/molly-core/reproducible-builds
 ```
 
 ### Schritt 2: Build mit korrekten Environment-Variablen

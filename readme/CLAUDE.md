@@ -5,7 +5,7 @@
 ## 🚀 Quick Start (Read This First!)
 
 ```bash
-# You are in: /home/mayer/prog/claude/osCASH.me/android
+# You are in: ~/prog/claude/osCASH.me/android
 # Project: osCASH.me Tier 3 Architecture (Molly Fork with crypto payments)
 # Status: APK v1.0.0-alpha3 SUCCESSFULLY BUILT & RELEASED ✅
 ```
@@ -49,7 +49,7 @@ osCASHme/android/
 
 ### Working Build Command:
 ```bash
-cd /home/mayer/prog/claude/osCASH.me/android/molly-core/reproducible-builds
+cd ~/prog/claude/osCASH.me/android/molly-core/reproducible-builds
 CI_APP_TITLE="osCASH.me" \
 CI_APP_FILENAME="osCASH.me" \
 CI_PACKAGE_ID="me.oscash.app" \
@@ -114,7 +114,7 @@ command: :app:assembleOscashBasicRelease    # This variant doesn't exist!
 
 ```bash
 # If build breaks, check these first:
-cd /home/mayer/prog/claude/osCASH.me/android
+cd ~/prog/claude/osCASH.me/android
 ls -la molly-core/                    # Verify symlink exists
 cat docker-build/.env                 # Check environment vars
 cat readme/osCASH-CRITICAL-FIXES.md   # Review all solutions

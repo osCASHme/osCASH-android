@@ -69,7 +69,7 @@ git lfs version
 
 ### 1. Arbeitsverzeichnis vorbereiten
 ```bash
-cd /home/mayer/data/share/Nextcloud/prog/claude/osCASH.me
+cd ~/data/share/Nextcloud/prog/claude/osCASH.me
 
 # Molly als Referenz clonen (read-only)
 git clone https://github.com/mollyim/mollyim-android.git molly-reference
