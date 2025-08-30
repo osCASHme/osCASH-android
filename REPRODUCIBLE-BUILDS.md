@@ -22,7 +22,7 @@ Sie können Ihre eigene osCASH.me Release in einem Docker-Container kompilieren 
 ### 1. Repository klonen
 ```bash
 # osCASH.me Quellcode klonen
-git clone https://github.com/osCASHme/android.git
+git clone https://github.com/osCASHme/osCASH-android.git
 cd android
 ```
 
@@ -50,7 +50,7 @@ docker compose run --rm assemble
 ### 4. Offizielle APK herunterladen
 ```bash
 # Laden Sie die offizielle osCASH.me APK herunter
-wget https://github.com/osCASHme/android/releases/download/$VERSION/osCASH.me-$VERSION-FOSS.apk
+wget https://github.com/osCASHme/osCASH-android/releases/download/$VERSION/osCASH.me-$VERSION-FOSS.apk
 ```
 
 ### 5. APKs vergleichen

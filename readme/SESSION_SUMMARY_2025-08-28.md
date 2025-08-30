@@ -28,7 +28,7 @@
 
 ### ✅ 4. GitHub Release Published
 - **Version**: v1.0.0-alpha3  
-- **URL**: https://github.com/osCASHme/android/releases/tag/v1.0.0-alpha3
+- **URL**: https://github.com/osCASHme/osCASH-android/releases/tag/v1.0.0-alpha3
 - **SHA256**: `2c5bc5a1621eaccbc148263ff1d07eb4edf96336c1705dd715ea206732f32f48`
 - **Timestamp**: 2025-08-28 03:03 UTC
 
@@ -102,8 +102,8 @@ All critical build solutions are now documented in:
 
 ## 🔗 Key Resources
 
-- **Working Repository**: https://github.com/osCASHme/android
-- **Latest APK**: https://github.com/osCASHme/android/releases/tag/v1.0.0-alpha3
+- **Working Repository**: https://github.com/osCASHme/osCASH-android
+- **Latest APK**: https://github.com/osCASHme/osCASH-android/releases/tag/v1.0.0-alpha3
 - **Build Command**: See `osCASH-CRITICAL-FIXES.md` for exact procedure
 - **Molly Base**: v7.53.5 (latest stable)
 
@@ -150,7 +150,7 @@ All critical build solutions are now documented in:
 
 4. **Final Success**
    - **v1.0.0-alpha3-MOB** - 84MB signed APK with MOB payments ✅
-   - **GitHub Release**: https://github.com/osCASHme/android/releases/tag/v1.0.0-alpha3-MOB
+   - **GitHub Release**: https://github.com/osCASHme/osCASH-android/releases/tag/v1.0.0-alpha3-MOB
    - **First osCASH.me release with native cryptocurrency payments!** 🚀💰
 
 #### Files Modified

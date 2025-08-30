@@ -20,7 +20,7 @@ git push origin v1.0.0-alpha
    - Sicherheits-Scans und Tests
 
 3. **APK herunterladen** von GitHub Releases:
-   - `https://github.com/osCASHme/android/releases/latest`
+   - `https://github.com/osCASHme/osCASH-android/releases/latest`
 
 ## 🛠️ Lokale Entwicklungsumgebung
 
@@ -43,7 +43,7 @@ Git 2.30+ (für Submodules)
 ### Setup
 ```bash
 # Repository clonen
-git clone https://github.com/osCASHme/android.git
+git clone https://github.com/osCASHme/osCASH-android.git
 cd android
 
 # Submodules initialisieren (Molly Core)
@@ -214,6 +214,6 @@ aapt dump permissions app-debug.apk
 
 ---
 
-**Bei Build-Problemen**: Erstelle ein [GitHub Issue](https://github.com/osCASHme/android/issues) mit detaillierten Logs.
+**Bei Build-Problemen**: Erstelle ein [GitHub Issue](https://github.com/osCASHme/osCASH-android/issues) mit detaillierten Logs.
 
 **Andere Sprachen:** [English](languages/en/BUILD.md)

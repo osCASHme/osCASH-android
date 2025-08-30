@@ -15,7 +15,7 @@
 ### ✅ COMPLETED: Tier 3 Foundation + MOB Payments (2025-08-28)
 - **APK Built**: `osCASH.me-v1.0.0-alpha3-MOB-FOSS.apk` (84MB) ✅
 - **Package ID**: `me.oscash.app`
-- **GitHub Release**: https://github.com/osCASHme/android/releases/tag/v1.0.0-alpha3-MOB
+- **GitHub Release**: https://github.com/osCASHme/osCASH-android/releases/tag/v1.0.0-alpha3-MOB
 - **Docker Build**: Fully functional, based on Molly-Repro system
 - **Architecture**: Multi-module with Molly-Core symlink integration
 - **🎉 MOB PAYMENTS**: ✅ **ACTIVATED & RELEASED!**

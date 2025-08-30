@@ -31,7 +31,7 @@ osCASH.me kombiniert **Privacy-first Messaging** mit **nahtloser Cryptocurrency-
 ### Setup
 ```bash
 # Repository clonen
-git clone https://github.com/osCASHme/android.git
+git clone https://github.com/osCASHme/osCASH-android.git
 cd android
 
 # Submodules initialisieren (Molly Core)

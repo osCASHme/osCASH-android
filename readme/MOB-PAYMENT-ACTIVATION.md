@@ -116,7 +116,7 @@ docker compose run --rm assemble
 - **Signing:** Multi-scheme v2+v3
 - **Package ID:** me.oscash.app
 - **Version:** v1.0.0-alpha3-MOB
-- **GitHub Release:** https://github.com/osCASHme/android/releases/tag/v1.0.0-alpha3-MOB
+- **GitHub Release:** https://github.com/osCASHme/osCASH-android/releases/tag/v1.0.0-alpha3-MOB
 
 ## 🚀 Features Enabled
 
@@ -183,7 +183,7 @@ This achievement builds upon:
 - [MobileCoin Protocol Documentation](https://github.com/mobilecoinfoundation/mobilecoin)
 - [Signal MOB Integration](https://signal.org/blog/help-us-test-payments-in-signal/)
 - [Molly.im Repository](https://github.com/mollyim/mollyim-android)
-- [osCASH.me Release](https://github.com/osCASHme/android/releases/tag/v1.0.0-alpha3-MOB)
+- [osCASH.me Release](https://github.com/osCASHme/osCASH-android/releases/tag/v1.0.0-alpha3-MOB)
 
 ---
 

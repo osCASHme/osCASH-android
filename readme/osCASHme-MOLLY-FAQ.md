@@ -156,12 +156,12 @@ aapt dump badging osCASH-*.apk | grep package
 ## 🔗 Links & Resources
 
 ### GitHub Repositories:
-- **osCASH.me**: https://github.com/osCASHme/android
+- **osCASH.me**: https://github.com/osCASHme/osCASH-android
 - **Molly Base**: https://github.com/mollyim/mollyim-android
 - **Signal**: https://github.com/signalapp/Signal-Android
 
 ### Latest Releases:
-- **osCASH.me v1.0.0-alpha3**: https://github.com/osCASHme/android/releases/tag/v1.0.0-alpha3
+- **osCASH.me v1.0.0-alpha3**: https://github.com/osCASHme/osCASH-android/releases/tag/v1.0.0-alpha3
 - **APK**: `osCASH-v1.0.0-alpha3-molly-7.53.5-FOSS.apk` (84MB)
 
 ### Documentation:

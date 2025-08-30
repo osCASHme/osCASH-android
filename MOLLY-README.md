@@ -49,9 +49,9 @@ Molly hat einzigartige Features im Vergleich zu Signal:
 
 osCASH.me wird als Open Source Projekt entwickelt mit vollständiger Transparenz:
 
-- **GitHub Repository**: https://github.com/osCASHme/android
-- **GitHub Wiki**: https://github.com/osCASHme/android/wiki
-- **Community Discussions**: https://github.com/osCASHme/android/discussions
+- **GitHub Repository**: https://github.com/osCASHme/osCASH-android
+- **GitHub Wiki**: https://github.com/osCASHme/osCASH-android/wiki
+- **Community Discussions**: https://github.com/osCASHme/osCASH-android/discussions
 - **Reproducible Builds**: Überprüfbare Builds vom Quellcode zur APK
 - **Live Development**: Alle Änderungen werden transparent auf GitHub dokumentiert
 - **Community Driven**: Von der Entwickler-Community für die User-Community

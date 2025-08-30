@@ -48,7 +48,7 @@ Basiert auf der bewährten **Molly** Privacy-Messenger Technologie:
 ### Aus den Releases
 ```bash
 # Download der neuesten APK
-wget https://github.com/osCASHme/android/releases/latest/osCASH.me.apk
+wget https://github.com/osCASHme/osCASH-android/releases/latest/osCASH.me.apk
 
 # Installation
 adb install osCASH.me.apk
@@ -57,8 +57,8 @@ adb install osCASH.me.apk
 ### Aus dem Source Code
 ```bash
 # Repository clonen
-git clone https://github.com/osCASHme/android.git
-cd android
+git clone https://github.com/osCASHme/osCASH-android.git
+cd osCASH-android
 
 # Dependencies installieren
 ./gradlew build
@@ -79,9 +79,9 @@ cd android
 ## 🤝 Entwicklung & Beitragen
 
 ### Community
-- **GitHub Wiki**: [github.com/osCASHme/android/wiki](https://github.com/osCASHme/android/wiki)
-- **GitHub Discussions**: [github.com/osCASHme/android/discussions](https://github.com/osCASHme/android/discussions)
-- **Issues**: [github.com/osCASHme/android/issues](https://github.com/osCASHme/android/issues)
+- **GitHub Wiki**: [github.com/osCASHme/osCASH-android/wiki](https://github.com/osCASHme/osCASH-android/wiki)
+- **GitHub Discussions**: [github.com/osCASHme/osCASH-android/discussions](https://github.com/osCASHme/osCASH-android/discussions)
+- **Issues**: [github.com/osCASHme/osCASH-android/issues](https://github.com/osCASHme/osCASH-android/issues)
 - **Reproducible Builds**: [REPRODUCIBLE-BUILDS.md](REPRODUCIBLE-BUILDS.md)
 
 ### Voraussetzungen
@@ -99,8 +99,8 @@ cd android
 
 ### Development Setup
 ```bash
-git clone https://github.com/osCASHme/android.git
-cd android
+git clone https://github.com/osCASHme/osCASH-android.git
+cd osCASH-android
 
 # Submodules initialisieren
 git submodule update --init --recursive
@@ -111,7 +111,7 @@ git submodule update --init --recursive
 
 ### Code-Struktur
 ```
-android/
+osCASH-android/
 ├── molly-core/           # Molly Privacy Messenger Basis
 ├── oscash-core/          # osCASH.me spezifische Features
 │   ├── payments-base/    # MobileCoin Wallet Integration

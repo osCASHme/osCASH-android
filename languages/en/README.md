@@ -48,7 +48,7 @@ Based on proven **Molly** privacy messenger technology:
 ### From Releases
 ```bash
 # Download latest APK
-wget https://github.com/osCASHme/android/releases/latest/osCASH.me.apk
+wget https://github.com/osCASHme/osCASH-android/releases/latest/osCASH.me.apk
 
 # Installation
 adb install osCASH.me.apk
@@ -57,7 +57,7 @@ adb install osCASH.me.apk
 ### From Source Code
 ```bash
 # Clone repository
-git clone https://github.com/osCASHme/android.git
+git clone https://github.com/osCASHme/osCASH-android.git
 cd android
 
 # Install dependencies
@@ -93,7 +93,7 @@ cd android
 
 ### Development Setup
 ```bash
-git clone https://github.com/osCASHme/android.git
+git clone https://github.com/osCASHme/osCASH-android.git
 cd android
 
 # Initialize submodules
