@@ -1,0 +1,179 @@
+name: "💳 Payment Gateway Issue | 💳 Zahlungsgateway Problem"
+description: "Issues related to payment gateway connections | Probleme mit Zahlungsgateway-Verbindungen"
+title: "[PAYMENT | ZAHLUNG] "
+labels: ["payment-gateway", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **🇬🇧 English** | **🇩🇪 Deutsch**
+        
+        Report issues with payment gateway connections, transactions, or wallet functionality.
+        
+        Melde Probleme mit Zahlungsgateway-Verbindungen, Transaktionen oder Wallet-Funktionalität.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: "Language | Sprache"
+      description: "Choose your preferred language for this issue | Wähle deine bevorzugte Sprache für dieses Issue"
+      options:
+        - "🇬🇧 English"
+        - "🇩🇪 Deutsch"
+        - "🌍 Other | Andere"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: "APK Version | APK Version"
+      description: "Which osCASH.me APK version? | Welche osCASH.me APK Version?"
+      placeholder: "v7.53.5-14-dev"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: server-type
+    attributes:
+      label: "Server Type | Server Typ"
+      description: "Which payment server? | Welcher Zahlungsserver?"
+      options:
+        - "🏢 Official Server | Offizieller Server (pay.osCASH.org)"
+        - "🧪 Demo Server | Demo Server (demo-pay.osCASH.org)"
+        - "🔧 Self-hosted | Selbst gehostet"
+        - "❓ Unknown | Unbekannt"
+    validations:
+      required: true
+
+  - type: input
+    id: server-url
+    attributes:
+      label: "Server URL (if custom) | Server URL (falls benutzerdefiniert)"
+      description: "Payment gateway URL if using custom server | Zahlungsgateway URL falls eigener Server verwendet wird"
+      placeholder: "https://my-custom-pay.example.com"
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: "Issue Type | Problem Typ"
+      description: "What kind of payment issue? | Welche Art von Zahlungsproblem?"
+      options:
+        - "🔗 Connection Failed | Verbindung fehlgeschlagen"
+        - "⚡ Test Connection Failed | Test Verbindung fehlgeschlagen"
+        - "💸 Transaction Failed | Transaktion fehlgeschlagen"
+        - "⏱️ Timeout Issues | Timeout Probleme"
+        - "🔑 Authentication Failed | Authentifizierung fehlgeschlagen"
+        - "💰 Balance Issues | Guthaben Probleme"
+        - "🔄 Sync Issues | Synchronisation Probleme"
+        - "🐛 Other Payment Bug | Anderer Zahlungs-Fehler"
+    validations:
+      required: true
+
+  - type: textarea
+    id: connection-issue
+    attributes:
+      label: "Connection Issue | Verbindungsproblem"
+      description: "Describe the connection problem | Beschreibe das Verbindungsproblem"
+      placeholder: |
+        🇬🇧 English:
+        - What error message did you see?
+        - When does the problem occur?
+        - Does it happen consistently?
+        
+        🇩🇪 Deutsch:
+        - Welche Fehlermeldung hast du gesehen?
+        - Wann tritt das Problem auf?
+        - Passiert es konstant?
+    validations:
+      required: true
+
+  - type: input
+    id: error-code
+    attributes:
+      label: "Error Code (if any) | Fehlercode (falls vorhanden)"
+      description: "Any specific error codes shown | Spezifische Fehlercodes die angezeigt wurden"
+      placeholder: "HTTP 500, SSL_ERROR, TIMEOUT_ERROR, etc."
+
+  - type: dropdown
+    id: network
+    attributes:
+      label: "Network Connection | Netzwerk Verbindung"
+      description: "What network are you using? | Welches Netzwerk verwendest du?"
+      options:
+        - "📶 WiFi"
+        - "📱 Mobile Data | Mobile Daten"
+        - "🌐 Tor (Orbot)"
+        - "🛡️ VPN"
+        - "🏢 Corporate Network | Firmen-Netzwerk"
+        - "🤔 Other | Andere"
+
+  - type: checkboxes
+    id: payment-features
+    attributes:
+      label: "Affected Features | Betroffene Features"
+      description: "Which payment features are affected? | Welche Zahlungs-Features sind betroffen?"
+      options:
+        - label: "🔍 Server Discovery | Server-Erkennung"
+        - label: "🔗 Test Connection | Verbindung testen"
+        - label: "🔑 API Key Validation | API Schlüssel Validierung"
+        - label: "💰 Balance Display | Guthaben Anzeige"
+        - label: "💸 Send Payment | Zahlung senden"
+        - label: "📥 Receive Payment | Zahlung empfangen"
+        - label: "📊 Transaction History | Transaktionsverlauf"
+        - label: "🔄 Wallet Sync | Wallet Synchronisation"
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: "Issue Frequency | Problem Häufigkeit"
+      description: "How often does this happen? | Wie oft passiert das?"
+      options:
+        - "🔴 Always | Immer"
+        - "🟡 Often | Oft"
+        - "🟢 Sometimes | Manchmal"
+        - "🔵 Rarely | Selten"
+        - "⚪ First time | Erstes Mal"
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: "Steps to Reproduce | Schritte zur Reproduktion"
+      description: "How to reproduce this payment issue | Wie man dieses Zahlungsproblem reproduziert"
+      placeholder: |
+        🇬🇧 English:
+        1. Go to Settings > Payments
+        2. Select Official Server
+        3. Enter API key
+        4. Click Test Connection
+        5. See error: "Connection timeout"
+        
+        🇩🇪 Deutsch:
+        1. Gehe zu Einstellungen > Zahlungen
+        2. Wähle Offizieller Server
+        3. Gib API Schlüssel ein
+        4. Klicke Verbindung testen
+        5. Sieh Fehler: "Verbindung Timeout"
+    validations:
+      required: true
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: "Configuration Details | Konfigurations-Details"
+      description: "Any relevant configuration (without sensitive data) | Relevante Konfiguration (ohne sensible Daten)"
+      placeholder: |
+        🇬🇧 English: Share configuration details (DO NOT include API keys or passwords)
+        🇩🇪 Deutsch: Teile Konfigurations-Details (KEINE API Schlüssel oder Passwörter angeben)
+      render: yaml
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "Expected Behavior | Erwartetes Verhalten"
+      description: "What should happen instead? | Was sollte stattdessen passieren?"
+      placeholder: |
+        🇬🇧 English: Describe what you expected to happen with the payment system.
+        🇩🇪 Deutsch: Beschreibe, was du vom Zahlungssystem erwartet hast.
+    validations:
+      required: true
