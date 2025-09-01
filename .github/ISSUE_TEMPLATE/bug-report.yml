@@ -1,0 +1,137 @@
+name: "🐛 Bug Report | 🐛 Fehler Melden"
+description: "Report a bug in osCASH.me APK | Melde einen Fehler in der osCASH.me APK"
+title: "[BUG | FEHLER] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **🇬🇧 English** | **🇩🇪 Deutsch**
+        
+        Thanks for reporting a bug! Please fill out the information below to help us understand and fix the issue.
+        
+        Vielen Dank für das Melden eines Fehlers! Bitte fülle die Informationen unten aus, damit wir das Problem verstehen und beheben können.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: "Language | Sprache"
+      description: "Choose your preferred language for this issue | Wähle deine bevorzugte Sprache für dieses Issue"
+      options:
+        - "🇬🇧 English"
+        - "🇩🇪 Deutsch"
+        - "🌍 Other | Andere"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: "APK Version | APK Version"
+      description: "Which osCASH.me APK version? | Welche osCASH.me APK Version?"
+      placeholder: "v7.53.5-14-dev"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: installation
+    attributes:
+      label: "Installation Source | Installations-Quelle"
+      description: "Where did you download the APK? | Wo hast du die APK heruntergeladen?"
+      options:
+        - "🚀 GitHub Releases | GitHub Releases"
+        - "🔧 Built from source | Selbst gebaut"
+        - "📱 F-Droid (planned) | F-Droid (geplant)"
+        - "🤔 Other | Andere"
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "Bug Description | Fehler Beschreibung"
+      description: "Clear description of the bug | Klare Beschreibung des Fehlers"
+      placeholder: |
+        🇬🇧 English: What happened? Be specific about what you observed.
+        🇩🇪 Deutsch: Was ist passiert? Beschreibe genau, was du beobachtet hast.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce | Schritte zur Reproduktion"
+      description: "How can we reproduce this issue? | Wie können wir dieses Problem reproduzieren?"
+      placeholder: |
+        🇬🇧 English:
+        1. Go to Settings > Payments
+        2. Select Official Server
+        3. Click Test Connection
+        4. See error
+        
+        🇩🇪 Deutsch:
+        1. Gehe zu Einstellungen > Zahlungen
+        2. Wähle Offizieller Server
+        3. Klicke Verbindung testen
+        4. Sieh Fehler
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected Behavior | Erwartetes Verhalten"
+      description: "What should have happened? | Was hätte passieren sollen?"
+      placeholder: |
+        🇬🇧 English: Describe what you expected to happen.
+        🇩🇪 Deutsch: Beschreibe, was du erwartet hast.
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: "Device Information | Geräte-Information"
+      description: "Device model and Android version | Gerätemodell und Android Version"
+      placeholder: "Pixel 6, Android 13 | Samsung Galaxy S21, Android 12"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: region
+    attributes:
+      label: "Region | Region"
+      description: "Your region (helps with debugging) | Deine Region (hilft beim Debugging)"
+      options:
+        - "🇩🇪 Germany | Deutschland"
+        - "🇦🇹 Austria | Österreich"  
+        - "🇨🇭 Switzerland | Schweiz"
+        - "🇨🇾 Cyprus | Zypern"
+        - "🇬🇧 United Kingdom"
+        - "🇺🇸 United States"
+        - "🇪🇺 Other EU | Andere EU"
+        - "🌍 Other | Andere"
+
+  - type: checkboxes
+    id: component
+    attributes:
+      label: "Affected Component | Betroffene Komponente"
+      description: "Which part of osCASH.me is affected? | Welcher Teil von osCASH.me ist betroffen?"
+      options:
+        - label: "💬 Messaging | Nachrichten"
+        - label: "💰 Payments/Wallet | Zahlungen/Wallet"
+        - label: "🔒 Encryption/Security | Verschlüsselung/Sicherheit"
+        - label: "⚙️ Settings | Einstellungen"
+        - label: "🌐 Network/Tor | Netzwerk/Tor"
+        - label: "📱 UI/Interface | Benutzeroberfläche"
+        - label: "🔗 Other | Andere"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs (Optional) | Logs (Optional)"
+      description: "If you have logs, paste them here | Falls du Logs hast, füge sie hier ein"
+      placeholder: |
+        🇬🇧 Paste any error logs or crash reports here
+        🇩🇪 Füge hier Fehler-Logs oder Crash-Reports ein
+      render: shell
