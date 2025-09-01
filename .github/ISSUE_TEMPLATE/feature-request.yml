@@ -1,0 +1,141 @@
+name: "✨ Feature Request | ✨ Feature Anfrage"
+description: "Suggest a new feature for osCASH.me | Schlage ein neues Feature für osCASH.me vor"
+title: "[FEATURE | FEATURE] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **🇬🇧 English** | **🇩🇪 Deutsch**
+        
+        Thanks for suggesting a feature! Please describe your idea below to help us understand your needs.
+        
+        Vielen Dank für deinen Feature-Vorschlag! Bitte beschreibe deine Idee unten, damit wir deine Bedürfnisse verstehen können.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: "Language | Sprache"
+      description: "Choose your preferred language for this issue | Wähle deine bevorzugte Sprache für dieses Issue"
+      options:
+        - "🇬🇧 English"
+        - "🇩🇪 Deutsch"
+        - "🌍 Other | Andere"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Feature Category | Feature Kategorie"
+      description: "What area does this feature belong to? | Zu welchem Bereich gehört dieses Feature?"
+      options:
+        - "💬 Messaging | Nachrichten"
+        - "💰 Payments/Wallet | Zahlungen/Wallet"
+        - "🔒 Privacy/Security | Privatsphäre/Sicherheit"
+        - "⚙️ Settings/Configuration | Einstellungen/Konfiguration"
+        - "🌐 Network/Connectivity | Netzwerk/Verbindungen"
+        - "📱 User Interface | Benutzeroberfläche"
+        - "🔗 Integration | Integration"
+        - "🚀 Performance | Leistung"
+        - "🌍 Accessibility | Barrierefreiheit"
+        - "🔧 Other | Andere"
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: "Feature Description | Feature Beschreibung"
+      description: "Clear description of the proposed feature | Klare Beschreibung des vorgeschlagenen Features"
+      placeholder: |
+        🇬🇧 English: What feature would you like to see? Be specific and detailed.
+        🇩🇪 Deutsch: Welches Feature würdest du gerne sehen? Sei spezifisch und detailliert.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: "Use Case | Anwendungsfall"
+      description: "Why is this feature needed? | Warum wird dieses Feature benötigt?"
+      placeholder: |
+        🇬🇧 English: 
+        - Who would benefit from this feature?
+        - What problem does it solve?
+        - How would you use it in practice?
+        
+        🇩🇪 Deutsch:
+        - Wer würde von diesem Feature profitieren?
+        - Welches Problem löst es?
+        - Wie würdest du es in der Praxis nutzen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: "Proposed Solution | Lösungsvorschlag"
+      description: "How do you think this should work? | Wie sollte das deiner Meinung nach funktionieren?"
+      placeholder: |
+        🇬🇧 English: Describe your ideal implementation. How should users interact with this feature?
+        🇩🇪 Deutsch: Beschreibe deine ideale Umsetzung. Wie sollen Nutzer mit diesem Feature interagieren?
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority | Priorität"
+      description: "How important is this feature to you? | Wie wichtig ist dieses Feature für dich?"
+      options:
+        - "🚨 Critical | Kritisch"
+        - "🔴 High | Hoch"
+        - "🟡 Medium | Mittel"
+        - "🟢 Low | Niedrig"
+        - "💡 Nice to have | Schön zu haben"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: region-relevance
+    attributes:
+      label: "Regional Relevance | Regionale Relevanz"
+      description: "Is this feature specific to certain regions? | Ist dieses Feature spezifisch für bestimmte Regionen?"
+      options:
+        - "🌍 Global | Global"
+        - "🇪🇺 EU specific | EU-spezifisch"
+        - "🇩🇪🇦🇹🇨🇭 DACH specific | DACH-spezifisch"
+        - "🇨🇾 Cyprus specific | Zypern-spezifisch"
+        - "🏦 Regulatory specific | Regulatorisch-spezifisch"
+        - "💰 Payment system specific | Zahlungssystem-spezifisch"
+
+  - type: checkboxes
+    id: complexity
+    attributes:
+      label: "Implementation Complexity | Umsetzungs-Komplexität"
+      description: "Check what you think this feature might require | Haken bei dem, was du denkst, dass dieses Feature benötigen könnte"
+      options:
+        - label: "🎨 UI/UX changes | UI/UX Änderungen"
+        - label: "⚙️ Backend integration | Backend Integration"
+        - label: "🔒 Security considerations | Sicherheitsüberlegungen"
+        - label: "💰 Payment system changes | Zahlungssystem Änderungen"
+        - label: "🌐 Network protocol changes | Netzwerkprotokoll Änderungen"
+        - label: "📱 Platform specific | Plattform-spezifisch"
+        - label: "🔗 Third-party integrations | Drittanbieter-Integrationen"
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives Considered | Betrachtete Alternativen"
+      description: "Have you considered alternative solutions? | Hast du alternative Lösungen betrachtet?"
+      placeholder: |
+        🇬🇧 English: Are there other ways to achieve the same goal? What are the pros/cons?
+        🇩🇪 Deutsch: Gibt es andere Wege, das gleiche Ziel zu erreichen? Was sind die Vor-/Nachteile?
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context | Zusätzlicher Kontext"
+      description: "Any other information that might be helpful | Jede andere Information, die hilfreich sein könnte"
+      placeholder: |
+        🇬🇧 English: Screenshots, mockups, links to similar features in other apps, etc.
+        🇩🇪 Deutsch: Screenshots, Mockups, Links zu ähnlichen Features in anderen Apps, etc.
